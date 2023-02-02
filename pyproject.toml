@@ -3,7 +3,7 @@
 [project]
 name = "pymaterial"
 version = "0.1.0"
-description = "pyMaterial, library for material and fatigue modeling."
+description = "pyMaterial, library for material and failure modeling."
 authors = [
     {name = "Willi Zschiebsch", email = "willi.zschiebsch@gmail.com"},
 ]
@@ -13,15 +13,6 @@ dependencies = [
 requires-python = ">=3.8"
 readme = "README.md"
 license = {text = "MIT"}
-[project.optional-dependencies]
-test = [
-    "pytest>=7.2.1",
-    "coverage>=7.1.0",
-    "ruff>=0.0.240",
-    "black>=23.1.0",
-    "isort>=5.12.0",
-    "pytest-cov>=4.0.0",
-]
 
 [build-system]
 requires = ["pdm-backend"]
