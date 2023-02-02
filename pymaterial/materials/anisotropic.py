@@ -1,7 +1,7 @@
 from .material import Material, ndarray, np
 
 
-class AnsiotropicMaterial(Material):
+class AnisotropicMaterial(Material):
     def __init__(self, stiffness: ndarray, density: float, **kwargs):
         """
         Parameters
