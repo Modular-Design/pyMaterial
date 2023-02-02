@@ -5,4 +5,4 @@
 
 ---
 
-A Python library for material and fatigue modeling.
+A Python library for material and failure modeling.
