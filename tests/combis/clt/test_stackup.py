@@ -1,6 +1,6 @@
 import pytest
-from pyMaterial.materials import TransverselyIsotropicMaterial
-from pyMaterial.combis.clt import Ply, Stackup
+from pymaterial.materials import TransverselyIsotropicMaterial
+from pymaterial.combis.clt import Ply, Stackup
 import numpy as np
 from math import ceil, log
 
