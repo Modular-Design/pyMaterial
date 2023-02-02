@@ -13,6 +13,18 @@ dependencies = [
 requires-python = ">=3.8"
 readme = "README.md"
 license = {text = "MIT"}
+[project.optional-dependencies]
+test = [
+    "coverage>=7.1.0",
+    "pytest>=7.2.1",
+    "pytest-cov>=4.0.0",
+]
+pytest = [
+    "coverage>=7.1.0",
+]
+pytest-cov = [
+    "coverage>=7.1.0",
+]
 
 [build-system]
 requires = ["pdm-backend"]
