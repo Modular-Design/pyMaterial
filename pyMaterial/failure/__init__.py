@@ -1,3 +1,3 @@
-from .ifalure import IFailure
-from .maxstressfailure import MaxStressFailure
-from .cuntzefailure import CuntzeFailure
+from .ifailure import IFailure  # noqa
+from .maxstress import MaxStressFailure  # noqa
+from .cuntze import CuntzeFailure  # noqa

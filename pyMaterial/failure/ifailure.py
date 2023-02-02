@@ -2,10 +2,12 @@ from typing import Optional, List
 
 
 class IFailure:
-    def get_failure(self,
-                    stresses: Optional[List[float]] = None,
-                    strains: Optional[List[float]] = None,
-                    temperature: Optional[float] = None) -> dict:
+    def get_failure(
+        self,
+        stresses: Optional[List[float]] = None,
+        strains: Optional[List[float]] = None,
+        temperature: Optional[float] = None,
+    ) -> dict:
         """
         Computes the loading dependent failure value.
         Parameters
