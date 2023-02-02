@@ -58,4 +58,4 @@ class TransverselyIsotropicMaterial(OrthotropicMaterial):
         compliance[4, 4] = 1 / self.G_lt
         compliance[5, 5] = 1 / self.G_lt
 
-        return
+        return compliance

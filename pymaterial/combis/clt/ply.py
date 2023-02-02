@@ -1,5 +1,5 @@
 import numpy as np
-from pyMaterial.materials import Material
+from pymaterial.materials import Material
 
 
 class Ply:

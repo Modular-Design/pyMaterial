@@ -1,9 +1,9 @@
 [tool.pdm]
 
 [project]
-name = "pyMaterial"
+name = "pymaterial"
 version = "0.1.0"
-description = "A Python library for material and fatigue modeling."
+description = "pyMaterial, library for material and fatigue modeling."
 authors = [
     {name = "Willi Zschiebsch", email = "willi.zschiebsch@gmail.com"},
 ]
@@ -20,6 +20,7 @@ test = [
     "ruff>=0.0.240",
     "black>=23.1.0",
     "isort>=5.12.0",
+    "pytest-cov>=4.0.0",
 ]
 
 [build-system]

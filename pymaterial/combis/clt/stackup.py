@@ -1,7 +1,7 @@
 from typing import List, Tuple
 import numpy as np
 from .ply import Ply
-from pyMaterial.materials import TransverselyIsotropicMaterial
+from pymaterial.materials import TransverselyIsotropicMaterial
 
 
 class Stackup:
