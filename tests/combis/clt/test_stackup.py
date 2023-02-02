@@ -1,5 +1,6 @@
 import pytest
-from src.DigitalDriveShaft.basic import Ply, TransverselyIsotropicMaterial, Stackup
+from pyMaterial.materials import TransverselyIsotropicMaterial
+from pyMaterial.combis.clt import Ply, Stackup
 import numpy as np
 from math import ceil, log
 
