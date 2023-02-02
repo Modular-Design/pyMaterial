@@ -1,0 +1,19 @@
+[tool.pdm]
+
+[project]
+name = "pyMaterial"
+version = "0.1.0"
+description = "A Python library for material and fatigue modeling."
+authors = [
+    {name = "Willi Zschiebsch", email = "willi.zschiebsch@gmail.com"},
+]
+dependencies = [
+    "numpy>=1.24.1",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
