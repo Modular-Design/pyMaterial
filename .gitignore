@@ -8,3 +8,6 @@ dist/
 
 .coverage
 .pdm.toml
+
+*.xml
+*.txt
