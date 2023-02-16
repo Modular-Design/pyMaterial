@@ -24,7 +24,7 @@ jobs:
         enable-pep582: true
 
     - name: Install dependencies
-      run: pdm sync -d -G test
+      run: pdm install -G test
     - name: Test with pytest
       run: |
         pdm run coverage run -m pytest tests
