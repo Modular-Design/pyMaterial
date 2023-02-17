@@ -2,10 +2,10 @@ from .ifailure import IFailure
 from typing import Optional, List, Tuple, Union
 
 
-class MaxStressFailure(IFailure):
+class MaxStress(IFailure):
     def __init__(self, stress_strength: List[Union[float, Tuple[float, float]]]):
         """
-        Maximum-Stress Failure Criteria
+        Maximum-Stress Failure Criterion
         Parameters
         ----------
         stress_strength : List[Tuple[float, float]]
@@ -29,7 +29,7 @@ class MaxStressFailure(IFailure):
         Examples
         --------
         Create a Plane-Maximum-Stress Failure Criteria
-        >>> criteria = MaxStressFailure([(0.0, 2.0), (-2.0, 2.0), 2.0])
+        >>> criteria = MaxStress([(0.0, 2.0), (-2.0, 2.0), 2.0])
         >>> crit_loading = [4.0, 2.0, 0.0]
         >>> criteria.get_failure(stresses=crit_loading)
         returns {``max-stress``: 2.0}
@@ -83,4 +83,4 @@ class MaxStressFailure(IFailure):
             middle = (s_max + s_min) / 2
             dist = (s_max - s_min) / 2
             factor.append(abs(load[i] - middle) / dist)
-        return {"max_stress": max(factor)}
+        return {"max-stress": max(factor)}
