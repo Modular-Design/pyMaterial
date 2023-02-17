@@ -15,34 +15,33 @@ class Cuntze(IFailure):
         interaction: Optional[float] = 2.5,
     ):
         """
+        Cuntze failure criterion [1]_
+
         Parameters
         ----------
-        E1
-        R_1t
-        R_1c
-        R_2t
-        R_2c
-        R_21
-        my_21
-        interaction
+        E1 : float
+            E-Modulus in fibre direction
+        R_1t : float
+            tensile strength in fibre direction
+        R_1c : float
+            compressive strength in fibre direction
+        R_2t : float
+            tensile strength perpendicular to fibre direction
+        R_2c : float
+            compressive strength perpendicular to fibre direction
+        R_21 : float
+            in-plane shear strength
+        my_21 : Optional[float], optional
+            Reibungs-/Materialparameter 0 < My > 0.3, by default 0.3
+        interaction : Optional[float], optional
+            Interaktionsfaktor 2,5 < m < 3,1, by default 2.5
+
         References
         ---------
         .. [1] R.G. Cuntze and A. Freund,
             "The predictive capability of failure mode concept-based strength criteria
             for multidirectional laminates", Composites Science and Technology, vol. 64,
             no. 3, pp. 343-377, 2004
-        """
-        # tes
-        """
-        Args:
-            E1: E-Modulus in fibre direction
-            R_1t: tensile strength in fibre direction
-            R_1c: compressive strength in fibre direction
-            R_2t: tensile strength perpendicular to fibre direction
-            R_2c: compressive strength perpendicular to fibre direction
-            R_21: In-plane shear strength
-            my_21: Reibungs-/Materialparameter 0 < My > 0.3
-            interaction:  Interaktionsfaktor 2,5 < m < 3,1
         """
 
         self.E1 = E1
@@ -53,7 +52,6 @@ class Cuntze(IFailure):
         self.R_21 = R_21
         self.my_21 = my_21
         self.interaction = interaction
-        pass
 
     def get_failure(
         self,
