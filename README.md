@@ -39,4 +39,19 @@ pip install pymaterial
 
 ## Development
 
+### Running Python tests
+
+```
+pdm run pytest tests/
+```
+
+```
+pdm run coverage run -m pytest tests/
+pdm run coverage report
+```
+
+```
+coverage html
+```
+
 ### TODOs
