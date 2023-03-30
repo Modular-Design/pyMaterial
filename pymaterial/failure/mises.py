@@ -3,7 +3,7 @@ from typing import Optional, List
 from math import sqrt
 
 
-class VonMises(IFailure):
+class VonMisesFailure(IFailure):
     def __init__(self, yield_stress: float):
         """
         con Mises yield criterion

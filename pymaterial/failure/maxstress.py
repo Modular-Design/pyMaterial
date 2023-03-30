@@ -2,7 +2,7 @@ from .ifailure import IFailure
 from typing import Optional, List, Tuple, Union
 
 
-class MaxStress(IFailure):
+class MaxStressFailure(IFailure):
     def __init__(self, stress_strength: List[Union[float, Tuple[float, float]]]):
         """
         Maximum-Stress Failure Criterion

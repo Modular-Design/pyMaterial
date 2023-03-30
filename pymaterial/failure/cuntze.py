@@ -2,7 +2,7 @@ from .ifailure import IFailure
 from typing import Optional, List
 
 
-class Cuntze(IFailure):
+class CuntzeFailure(IFailure):
     def __init__(
         self,
         E1: float,
