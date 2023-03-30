@@ -39,19 +39,15 @@ pip install pymaterial
 
 ## Development
 
+First make sure you installed everything:
+```
+pdm sync
+```
+
 ### Running Python tests
 
 ```
-pdm run pytest tests/
-```
-
-```
-pdm run coverage run -m pytest tests/
-pdm run coverage report
-```
-
-```
-coverage html
+pdm run pytest --cov pymaterial
 ```
 
 ### TODOs
