@@ -1,0 +1,37 @@
+flag_management:
+  default_rules: # the rules that will be followed for any flag added, generally
+    carryforward: true
+    statuses:
+      - type: project
+        target: auto
+        threshold: 1%
+      - type: patch
+        target: 90%
+  individual_flags:
+    - name: materials
+      paths:
+      - pymaterial/materials
+      carryforward: true
+      statuses:
+        - type: project
+          target: 20%
+        - type: patch
+          target: 100%
+    - name: failures
+      paths:
+      - pymaterial/failures
+      carryforward: true
+      statuses:
+        - type: project
+          target: 20%
+        - type: patch
+          target: 100%
+    - name: combis
+      paths:
+      - pymaterial/combis
+      carryforward: true
+      statuses:
+      - type: project
+        target: 20%
+      - type: patch
+        target: 100%
