@@ -1,5 +1,5 @@
 import pytest
-from pymaterial.failure import CuntzeFailure
+from pymaterial.failures import CuntzeFailure
 
 
 @pytest.mark.parametrize(

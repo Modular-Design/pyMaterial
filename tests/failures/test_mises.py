@@ -1,5 +1,5 @@
 import pytest
-from pymaterial.failure import VonMisesFailure
+from pymaterial.failures import VonMisesFailure
 
 
 @pytest.mark.parametrize(

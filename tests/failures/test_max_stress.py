@@ -1,5 +1,5 @@
 import pytest
-from pymaterial.failure import MaxStressFailure
+from pymaterial.failures import MaxStressFailure
 
 
 @pytest.mark.parametrize(
