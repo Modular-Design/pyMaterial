@@ -1,5 +1,5 @@
 import pytest
-from pymaterial.failure import MaxStress
+from pymaterial.failure import MaxStressFailure
 
 
 @pytest.mark.parametrize(
@@ -12,7 +12,7 @@ from pymaterial.failure import MaxStress
     ],
 )
 def test_values(strength, stress, result, ndigits):
-    failure = MaxStress(strength)
+    failure = MaxStressFailure(strength)
     res = failure.get_failure(stress)
     assert round(res["max-stress"], ndigits) == result
 
@@ -29,11 +29,11 @@ def test_values(strength, stress, result, ndigits):
 )
 def test_wrong_strength_length_exeption(val):
     with pytest.raises(ValueError):
-        MaxStress(val)
+        MaxStressFailure(val)
 
 
 def test_none_stress():
-    failure = MaxStress([1.0, 1.0, 1.0])
+    failure = MaxStressFailure([1.0, 1.0, 1.0])
     with pytest.raises(ValueError):
         failure.get_failure()
 
@@ -56,6 +56,6 @@ def test_none_stress():
     ],
 )
 def test_incorrect_stress_lenght(strength, stresses):
-    failure = MaxStress(strength)
+    failure = MaxStressFailure(strength)
     with pytest.raises(ValueError):
         failure.get_failure(stresses)

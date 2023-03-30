@@ -1,5 +1,5 @@
 import pytest
-from pymaterial.failure import VonMises
+from pymaterial.failure import VonMisesFailure
 
 
 @pytest.mark.parametrize(
@@ -13,7 +13,7 @@ from pymaterial.failure import VonMises
     ],
 )
 def test_values(strength, stress, result, ndigits):
-    failure = VonMises(strength)
+    failure = VonMisesFailure(strength)
     res = failure.get_failure(stress)
     assert round(res["mises"], ndigits) == result
 
@@ -28,11 +28,11 @@ def test_values(strength, stress, result, ndigits):
 )
 def test_negative_strength_exeption(val):
     with pytest.raises(ValueError):
-        VonMises(val)
+        VonMisesFailure(val)
 
 
 def test_none_stress():
-    failure = VonMises(1)
+    failure = VonMisesFailure(1)
     with pytest.raises(ValueError):
         failure.get_failure()
 
@@ -48,6 +48,6 @@ def test_none_stress():
     ],
 )
 def test_incorrect_stress_lenght(stresses):
-    failure = VonMises(1)
+    failure = VonMisesFailure(1)
     with pytest.raises(ValueError):
         failure.get_failure(stresses)

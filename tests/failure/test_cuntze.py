@@ -1,5 +1,5 @@
 import pytest
-from pymaterial.failure import Cuntze
+from pymaterial.failure import CuntzeFailure
 
 
 @pytest.mark.parametrize(
@@ -9,6 +9,6 @@ from pymaterial.failure import Cuntze
     ],
 )
 def test_values(Em, rs, stresses, strains, result, ndigits):
-    failure = Cuntze(Em, rs[0], rs[1], rs[2], rs[3], rs[4])
+    failure = CuntzeFailure(Em, rs[0], rs[1], rs[2], rs[3], rs[4])
     res = failure.get_failure(stresses, strains)
     assert round(res["cuntze"], ndigits) == result
