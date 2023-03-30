@@ -37,3 +37,4 @@ jobs:
       with:
         files: ./coverage.xml
         flags: ${{ matrix.flag }}
+        fail_ci_if_error: true
