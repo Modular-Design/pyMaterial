@@ -1,6 +1,4 @@
 [run]
 omit=
-    */__pypackages__/*
-    */site-packages/*
-    */distutils/*
     tests/*
+    pymaterial/library/*
