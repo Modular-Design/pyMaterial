@@ -1,5 +1,5 @@
 import numpy as np
-from ..failure import IFailure
+from pymaterial.failures import IFailure
 from typing import Optional, List, Union
 from numpy import ndarray
 
