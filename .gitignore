@@ -7,7 +7,7 @@ dist/
 *.egg-info/
 
 .coverage
-.pdm.toml
+.pdm-python
 
 *.xml
 *.txt
