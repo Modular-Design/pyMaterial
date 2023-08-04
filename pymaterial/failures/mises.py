@@ -53,7 +53,7 @@ class VonMisesFailure(IFailure):
 
         if length == 3:
             s12 = stresses[2]
-            stress = sqrt(s11**2 - s11 * s22 + s22**2 + 3 * s12)
+            stress = sqrt(s11**2 - s11 * s22 + s22**2 + 3 * s12**2)
         else:  # length == 6
             s33 = stresses[2]
             s31 = stresses[3]
