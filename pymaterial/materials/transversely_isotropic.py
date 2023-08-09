@@ -15,6 +15,7 @@ class TransverselyIsotropicMaterial(OrthotropicMaterial):
         self.E_l = E_l
         self.E_t = E_t
         self.nu_lt = nu_lt
+        self.nu_tt = nu_tt
         if nu_tt is None:
             self.nu_tt = nu_lt
         self.G_lt = G_lt
